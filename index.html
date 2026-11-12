@@ -40,7 +40,7 @@
   <ul>
     <li><strong>No account or sign-up.</strong> The App has no login, registration, or user profiles.</li>
     <li><strong>No data is stored by us.</strong> We do not operate any servers and never receive, store, or sell your data.</li>
-    <li><strong>Your location stays on your device</strong>, except when it is sent to the map services below to search for mosques near you.</li>
+    <li><strong>Your location stays on your device</strong>, except when it is sent to the services below to search for mosques near you, to draw the map, or to work out which country you are in.</li>
     <li><strong>Prayer times</strong> in Qatar come from publicly published schedules &mdash; prayers.qa (which publishes the Qatar Calendar House timetable) or the Ministry of Interior's public service &mdash; via requests that carry no personal data. Everywhere else they are calculated on your device.</li>
     <li><strong>No tracking, no ads, and no analytics of ours.</strong></li>
   </ul>
@@ -50,15 +50,15 @@
   <h3>Location</h3>
   <p>When you grant permission, the App reads your device's position while you are using the App, to search for mosques near you, to work out how far away they are, to calculate prayer times where you are, and to point to the Qibla. You may grant an approximate position only; the App works with it. The App never asks for access to your location in the background.</p>
   <ul>
-    <li>Your position is sent off your device only to perform the nearby search and to draw the map:
+    <li>Your position is sent off your device only to perform the nearby search, to draw the map, and for Travel Mode (described next):
       <ul>
         <li><strong>Apple Maps</strong> (iPhone and iPad), in the same way the built-in Maps app does. Apple's handling of this data is described in <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
         <li><strong>Google Maps</strong> (Android), which draws the map inside the App. Google receives the area of the map you are viewing. Google's handling of this data is described in <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
-        <li>The <strong>OpenStreetMap Overpass API</strong>, a community-operated service that provides OpenStreetMap's public map data. Only your coordinates and the search radius are sent &mdash; no identifiers, no account, nothing else. The OpenStreetMap Foundation's data handling is described in its <a href="https://osmfoundation.org/wiki/Privacy_Policy">Privacy Policy</a>.</li>
-        <li>The <strong>Google Places API</strong> (a Google service), to include mosques known to Google Maps. Only your coordinates, the search radius, and your app language are sent.</li>
+        <li>The <strong>OpenStreetMap Overpass API</strong>, a community-operated service that provides OpenStreetMap's public map data. Only your coordinates and the search radius are sent &mdash; no identifiers, no account, nothing else. The request goes to the public Overpass server at overpass-api.de, operated by FOSSGIS e.V. (Germany) under its <a href="https://www.fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/">terms of use</a>, and, only if that server does not answer, to the one at overpass.kumi.systems, operated by Private.coffee (Austria), whose privacy policy is on <a href="https://overpass.private.coffee/">its own page</a>. Neither is operated by the OpenStreetMap Foundation. Like any web server, each sees the IP address the request comes from.</li>
+        <li>The <strong>Google Places API</strong> (a Google service), to include mosques known to Google Maps. Only your coordinates, the search radius, and whether to return the names in Arabic or in English are sent, together with the key and app identifier that tell Google the request comes from Masajid Qatar.</li>
       </ul>
     </li>
-    <li><strong>Travel Mode.</strong> Outside Qatar, the App works out which country you are in so that it can suggest that country's prayer-time convention. To do so it asks your device's own geocoding service (Apple's on iPhone and iPad; on Android, the one built into your phone, usually Google's) for the country at your coordinates, or reads the country of the mobile network you are connected to.</li>
+    <li><strong>Travel Mode.</strong> When you are outside Qatar, and whenever you open the Travel Mode screen, the App works out which country you are in so that it can suggest that country's prayer-time convention. To do so it asks your device's own geocoding service (Apple's on iPhone and iPad; on Android, the one built into your phone, usually Google's) for the country at your coordinates; on Android, if that service gives no answer, it reads the country of the mobile network you are connected to instead.</li>
     <li><strong>Your most recent position is kept on your device</strong>, so that prayer alerts and home-screen widgets stay correct while the App is closed. It is never sent to us &mdash; we have no servers to send it to &mdash; and it is not used for anything else. On Android it is excluded from the device backup.</li>
     <li>You can withdraw location access at any time in your device's Settings. The App will still open, but it cannot search for mosques near you without it.</li>
   </ul>
@@ -67,7 +67,7 @@
   <p>When you are in Qatar, the App fetches the day's prayer times from <strong>prayers.qa</strong>, a public website that publishes the Qatar Calendar House timetable, with <strong>Qatar's Ministry of Interior public service</strong> (portal.moi.gov.qa) as a fallback. These requests contain <strong>no personal data and no location</strong> &mdash; they are the same public pages anyone can open in a browser. The App may repeat this request about once a day in the background so that alerts and widgets have the day's times. Outside Qatar, or when the service is unreachable, prayer times (including Friday's Jumu'ah) are calculated astronomically <strong>on your device</strong> from your coordinates. Iqama times are approximate offsets in both cases. The Qibla direction is computed entirely on your device.</p>
 
   <h3>Islamic Events</h3>
-  <p>The Events tab shows Islamic occasions computed <strong>on your device</strong> from the Hijri calendar, alongside recent activities published by <strong>Qatar's Ministry of Endowments and Islamic Affairs (Awqaf)</strong>. To show those activities, the App fetches the ministry's public news feed (meiaservicesext.islam.gov.qa). That request contains <strong>no personal data and no location</strong> &mdash; only whether to return the items in Arabic or in English. The feed is cached on your device and refreshed at most every 36 hours. Tapping through to read more opens the ministry's own website (islam.gov.qa) in your browser, under the ministry's own terms.</p>
+  <p>The Events tab shows Islamic occasions computed <strong>on your device</strong> from the Hijri calendar, alongside recent activities published by <strong>Qatar's Ministry of Endowments and Islamic Affairs (Awqaf)</strong>. To show those activities, the App fetches the ministry's public news feed (meiaservicesext.islam.gov.qa). That request contains <strong>no personal data and no location</strong> &mdash; only whether to return the items in Arabic or in English. The feed is cached on your device and refreshed automatically at most every 36 hours; it is also fetched when you pull down to refresh the tab, and when you change the App's language between Arabic and another language. Tapping through to read more opens the ministry's own website (islam.gov.qa) in your browser, under the ministry's own terms.</p>
 
   <h3>Notifications</h3>
   <p>Adhan, iqama, sunrise, and morning/evening adhkar reminders are <strong>optional and off by default</strong>. When you turn them on, they are scheduled locally on your device. No push-notification server is involved and nothing leaves your device. You can turn them off at any time in the App or in your device's Settings.</p>
@@ -76,10 +76,10 @@
   <p>The Quran, its translation and the morning and evening adhkar are bundled within the App &mdash; reading them sends nothing anywhere. Your reading progress is stored only on your device. If you use <strong>Suggestions &amp; Feedback</strong>, the App simply opens your own email app with a message addressed to us; you choose what to write and whether to send it.</p>
 
   <h3>Zakat Calculator</h3>
-  <p>Any figures you enter in the Zakat calculator are <strong>stored only on your device</strong> so you can revisit them, and are never transmitted to us or anyone else. To value the nisab threshold, the App fetches public gold and silver spot prices from gold-api.com; that request contains <strong>no personal data and none of your figures</strong> &mdash; it asks only for the current metal price.</p>
+  <p>Any figures you enter in the Zakat calculator are <strong>stored only on your device</strong> so you can revisit them (and, on iPhone and iPad, in your own device backup if you have turned one on &mdash; see Settings and Backups below), and are never transmitted to us. To value the nisab threshold, the App fetches public gold and silver spot prices from gold-api.com; that request contains <strong>no personal data and none of your figures</strong> &mdash; it asks only for the current metal price.</p>
 
   <h3>Settings and Backups</h3>
-  <p>Your language (English, Arabic, Urdu, Bengali or Malayalam) and other in-app settings are stored only on your device and are not personal data. If you have turned on your device's own backup (iCloud on iPhone and iPad, Google on Android), your in-app settings and reading progress may be included in it, so that they return when you set up a new device. That backup is held under your own Apple or Google account, never by us. On Android, your position, your Zakat figures and the cached lists of nearby mosques are left out of it.</p>
+  <p>Your language (English, Arabic, Urdu, Bengali or Malayalam) and other in-app settings are stored only on your device and are not personal data. If you have turned on your device's own backup (iCloud on iPhone and iPad, Google on Android), your in-app settings and reading progress may be included in it, so that they return when you set up a new device. That backup is held under your own Apple or Google account, never by us. On Android, your position, your Zakat figures and the cached lists of nearby mosques are left out of it. On iPhone and iPad the backup covers everything the App keeps, including your most recent position and your Zakat figures.</p>
 
   <h3>Nothing Else</h3>
   <p>The App does not collect, request, or have access to:</p>
@@ -91,15 +91,17 @@
   </ul>
 
   <h2>Third-Party Services</h2>
-  <p>The App uses these services to find mosques near you and to show the map:</p>
+  <p>The App uses these services to find where you are, to find mosques near you and to show the map:</p>
   <ul>
     <li><strong>Apple Maps (MapKit)</strong> on iPhone and iPad, provided by Apple Inc., to search for mosques and display the map.</li>
     <li><strong>Google Maps (Maps SDK for Android)</strong> on Android, provided by Google LLC, to display the map. As Google describes for this component, it also sends Google technical information about its own operation: device details (model, operating-system version), your IP address, an identifier used only by the maps component to count its active users, how the map is moved, and crash information from within the component. We do not receive any of it.</li>
     <li><strong>OpenStreetMap data via the Overpass API</strong>, to include community-mapped mosques (mosque data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>).</li>
     <li><strong>Google Places</strong>, provided by Google LLC, to include mosques known to Google Maps. Results from this source are credited to Google wherever they are listed.</li>
+    <li><strong>Google Play services (location)</strong> on Android, provided by Google LLC: the part of your phone that works out its position, which the App asks for that position while you are using the App. On a phone without Google Play services the App asks Android itself. How Google's location service handles your position is governed by your phone's own location settings and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+    <li><strong>Your device's geocoding service</strong> (Apple's on iPhone and iPad; on Android usually Google's), for Travel Mode's country lookup described above.</li>
   </ul>
   <p>When you tap "Get Directions," you can choose a navigation app: <strong>Apple Maps</strong> (iPhone and iPad), <strong>Google Maps</strong>, or <strong>Waze</strong>. The App opens the service you chose with the <strong>mosque's location</strong> (never your own position &mdash; the navigation app determines your position itself, under its own privacy policy: <a href="https://www.apple.com/legal/privacy/">Apple</a>, <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.waze.com/legal/privacy">Waze</a>). If the chosen app is not installed, the link opens in your browser instead.</p>
-  <p>No other third-party services, SDKs, advertising networks, or analytics tools are used.</p>
+  <p>Beyond these, and the public sources named in this policy (prayers.qa, the Ministry of Interior, the Ministry of Endowments and Islamic Affairs, and gold-api.com), no other third-party services, SDKs, advertising networks, or analytics tools are used.</p>
 
   <h2>Sources of Information</h2>
   <p>The App is not a government app. It reads these public sources: prayer times in Qatar from <a href="https://prayers.qa/">prayers.qa</a> (the Qatar Calendar House timetable; the Calendar House's own site is <a href="https://www.qatarch.com/">qatarch.com</a>) and from the <a href="https://portal.moi.gov.qa/">Ministry of Interior's public portal</a>; the mosque directory and ministry activities from the <a href="https://www.islam.gov.qa/">Ministry of Endowments and Islamic Affairs</a>.</p>
